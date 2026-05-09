@@ -87,3 +87,13 @@ function mostrarUsuarios(lista){
     });
 
     contarUsuarios();
+
+
+ <!--funcion cambio de estado-->   
+
+    function cambiarEstado(index){
+
+    usuarios[index].activo = !usuarios[index].activo;
+
+    mostrarUsuarios(usuarios);
+}
