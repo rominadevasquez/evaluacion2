@@ -18,7 +18,7 @@
         <h1 class="text-center mb-4">Panel Gestión de Usuarios</h1>
 
         <!-- Creación de formulario para nombre y edad -->
-        <div class="card p-4 mb-4">
+        <div class="card p-4 mb-4 shadow-sm">
             <div class="mb-3">
                 <label>Nombre</label>
                 <input type="text" id="nombre" class="form-control">
@@ -45,19 +45,20 @@
             </button>
         </div>
 
-        <!-- Filtro, el cual permite el filtrado al cambiar de opción entre todos, adm y usuarios -->
-        <div class="mb-3">
-            <select id="filtro" class="form-select" onchange="filtrarUsuarios()">
-                <option value="Todos">Todos</option>
-                <option value="Administrador">Administradores</option>
-                <option value="Usuario">Usuarios</option>
-            </select>
+        <div class="row g-3 align-items-center mb-3">
+            <div class="col-md-8">
+                <select id="filtro" class="form-select" onchange="filtrarUsuarios()">
+                    <option value="Todos">Todos</option>
+                    <option value="Administrador">Administradores</option>
+                    <option value="Usuario">Usuarios</option>
+                </select>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <button class="btn btn-secondary w-100 w-md-auto" onclick="ordenarPorEdad()">
+                    Ordenar por Edad
+                </button>
+            </div>
         </div>
-
-        <!-- Botón para ordenar a los usuarios por edad -->
-        <button class="btn btn-secondary mb-3" onclick="ordenarPorEdad()">
-            Ordenar por Edad
-        </button>
 
         <!-- Contador para revisar usuarios activos e inactivos -->
         <div class="mb-3">
@@ -66,19 +67,21 @@
         </div>
 
         <!-- Tabla con columnas que contienen datos como nombre, edad, rol y estado y acciones-->
-        <table class="table table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Rol</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="tablaUsuarios">
-            </tbody>
-        </table>
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-bordered mb-0 align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Rol</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios">
+                </tbody>
+            </table>
+        </div>
     </div>
 
 <script src="script.js"></script>

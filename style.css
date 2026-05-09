@@ -1,11 +1,102 @@
-body{
-    background-color: #e6e8e9;
+body {
+    background-color: #f5f4f2;
+    color: #2b3145;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-h1{
-    color: #090909;
+h1 {
+    color: #1f2937;
+    letter-spacing: -0.02em;
 }
 
-.card{
-    border-radius: 10px;
+.card {
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff 0%, #faf8f4 100%);
+    border: 1px solid rgba(60, 63, 70, 0.1);
+    box-shadow: 0 18px 35px rgba(53, 61, 81, 0.08);
+}
+
+.form-control,
+.form-select {
+    border-radius: 14px;
+    border-color: rgba(84, 88, 104, 0.14);
+    box-shadow: none;
+    background-color: #f6f4f1;
+    color: #2f3a4f;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #7988a4;
+    box-shadow: 0 0 0 0.16rem rgba(121, 136, 164, 0.18);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-warning,
+.btn-danger {
+    border-radius: 14px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #556b8b;
+    border-color: #4b5f7d;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #d9c6a1;
+    border-color: #c8b08a;
+    color: #2f2a22;
+}
+
+.btn-warning {
+    background-color: #d4a465;
+    border-color: #bd8f4d;
+    color: #1d1710;
+}
+
+.btn-danger {
+    background-color: #9e5b6f;
+    border-color: #8d4f63;
+    color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-warning:hover,
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(45, 53, 75, 0.12);
+}
+
+.table {
+    background-color: #faf8f4;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    border-color: rgba(96, 101, 118, 0.16);
+}
+
+.table thead th {
+    background-color: #34435c;
+    color: #f6f2ed;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.14);
+}
+
+.table-responsive {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 0.4rem;
+}
+
+#contadorActivos,
+#contadorInactivos {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #424b60;
 }
