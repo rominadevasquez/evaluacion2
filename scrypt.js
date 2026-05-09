@@ -2,7 +2,7 @@
 
 let usuarios = [];
 
-<!--validamos los campos que se ingresan en el formulario creado en index--> 
+//validamos los campos que se ingresan en el formulario creado en index 
 
 function validarFormulario(nombre, edad, rol){
 
@@ -19,7 +19,7 @@ function validarFormulario(nombre, edad, rol){
     return true;
 }
 
-<!--funcion usuarios para agregarlos y valida los datos-->
+//funcion usuarios para agregarlos y valida los datos
 function agregarUsuario(){
 
     let nombre = document.getElementById("nombre").value;
@@ -46,7 +46,7 @@ function agregarUsuario(){
 
 
 
-<!--funcion mostrar usuarios para que los muestre en pantalla-->
+//funcion mostrar usuarios para que los muestre en pantalla
 function mostrarUsuarios(lista){
 
     let tabla = document.getElementById("tablaUsuarios");
@@ -98,7 +98,7 @@ function mostrarUsuarios(lista){
     mostrarUsuarios(usuarios);
 }
 
-<!--funcion filtrado de usuarios que los mostrara de acuerdo al rol-->
+//funcion filtrado de usuarios que los mostrara de acuerdo al rol
 function filtrarUsuarios(){
 
     let filtro = document.getElementById("filtro").value;
@@ -118,7 +118,7 @@ function filtrarUsuarios(){
 
 
 
-<!--funcion contador de usuarios-->
+//funcion contador de usuarios
 function contarUsuarios(){
 
     let activos = usuarios.filter(usuario => usuario.activo).length;
@@ -134,7 +134,7 @@ function contarUsuarios(){
 
 
 
-<!--funcion ordenar por edad, limpiar y eliminar usuarios-->
+//funcion ordenar por edad, limpiar y eliminar usuarios
 
 function ordenarPorEdad(){
 
