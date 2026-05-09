@@ -97,3 +97,21 @@ function mostrarUsuarios(lista){
 
     mostrarUsuarios(usuarios);
 }
+
+<!--funcion filtrado de usuarios que los mostrara de acuerdo al rol-->
+function filtrarUsuarios(){
+
+    let filtro = document.getElementById("filtro").value;
+
+    if(filtro === "Todos"){
+        mostrarUsuarios(usuarios);
+
+    }else{
+
+        let filtrados = usuarios.filter(usuario =>
+            usuario.rol === filtro
+        );
+
+        mostrarUsuarios(filtrados);
+    }
+}
