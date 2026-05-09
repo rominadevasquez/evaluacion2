@@ -58,5 +58,37 @@
         </select>
 
     </div>
+
+        <!-- boton para ordenar a los usuarios por edad -->
+    <button class="btn btn-secondary mb-3" onclick="ordenarPorEdad()">
+        Ordenar por Edad
+    </button>
+
+    <!-- contador para revisar usuarios activos e inactivos -->
+    <div class="mb-3">
+        <p id="contadorActivos"></p>
+        <p id="contadorInactivos"></p>
+    </div>
+
+    <!-- tabla con cplumnas qu contienen datos como nombre, edad, rol y el estado y acciones-->
+    <table class="table table-bordered">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Rol</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaUsuarios">
+
+        </tbody>
+
+    </table>
+
+</div>
 </body>
 </html>
