@@ -43,3 +43,47 @@ function agregarUsuario(){
 
     limpiarFormulario();
 }
+
+
+
+<!--funcion mostrar usuarios para que los muestre en pantalla-->
+function mostrarUsuarios(lista){
+
+    let tabla = document.getElementById("tablaUsuarios");
+
+    tabla.innerHTML = "";
+
+    lista.forEach((usuario, index) => {
+
+        let fila = document.createElement("tr");
+
+        fila.innerHTML = `
+            <td>${usuario.nombre}</td>
+            <td>${usuario.edad}</td>
+            <td>${usuario.rol}</td>
+            <td>
+                ${usuario.activo ? "Activo" : "Inactivo"}
+            </td>
+
+            <td>
+
+                <button class="btn btn-warning btn-sm"
+                onclick="cambiarEstado(${index})">
+
+                Cambiar Estado
+                </button>
+
+                <button class="btn btn-danger btn-sm"
+                onclick="eliminarUsuario(${index})">
+
+                Eliminar
+                </button>
+
+            </td>
+        `;
+
+        tabla.appendChild(fila);
+
+    });
+
+    contarUsuarios();
