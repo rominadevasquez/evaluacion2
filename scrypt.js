@@ -18,3 +18,28 @@ function validarFormulario(nombre, edad, rol){
 
     return true;
 }
+
+<!--funcion usuarios para agregarlos y valida los datos-->
+function agregarUsuario(){
+
+    let nombre = document.getElementById("nombre").value;
+    let edad = document.getElementById("edad").value;
+    let rol = document.getElementById("rol").value;
+
+    if(!validarFormulario(nombre, edad, rol)){
+        return;
+    }
+
+    let nuevoUsuario = {
+        nombre: nombre,
+        edad: Number(edad),
+        rol: rol,
+        activo: true
+    };
+
+    usuarios.push(nuevoUsuario);
+
+    mostrarUsuarios(usuarios);
+
+    limpiarFormulario();
+}
