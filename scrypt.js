@@ -115,3 +115,19 @@ function filtrarUsuarios(){
         mostrarUsuarios(filtrados);
     }
 }
+
+
+
+<!--funcion contador de usuarios-->
+function contarUsuarios(){
+
+    let activos = usuarios.filter(usuario => usuario.activo).length;
+
+    let inactivos = usuarios.filter(usuario => !usuario.activo).length;
+
+    document.getElementById("contadorActivos").innerText =
+    "Usuarios activos: " + activos;
+
+    document.getElementById("contadorInactivos").innerText =
+    "Usuarios inactivos: " + inactivos;
+}
