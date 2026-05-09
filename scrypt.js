@@ -131,3 +131,28 @@ function contarUsuarios(){
     document.getElementById("contadorInactivos").innerText =
     "Usuarios inactivos: " + inactivos;
 }
+
+
+
+<!--funcion ordenar por edad, limpiar y eliminar usuarios-->
+
+function ordenarPorEdad(){
+
+    usuarios.sort((a, b) => a.edad - b.edad);
+
+    mostrarUsuarios(usuarios);
+}
+
+function eliminarUsuario(index){
+
+    usuarios.splice(index, 1);
+
+    mostrarUsuarios(usuarios);
+}
+
+function limpiarFormulario(){
+
+    document.getElementById("nombre").value = "";
+    document.getElementById("edad").value = "";
+    document.getElementById("rol").value = "";
+}
